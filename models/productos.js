@@ -1,5 +1,3 @@
-// const fs = require('fs');
-
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 
 export default class ProductManager {
@@ -28,7 +26,7 @@ export default class ProductManager {
         }
     }
 //agregar
-    addProduct(title, description, price, img, code, stock) {
+    addProduct(title, description, code, price, thumbnail, status, stock, category) {
 //codigo de producto ya existe
         try {
             let mensaje;
@@ -43,9 +41,11 @@ export default class ProductManager {
                     title,
                     description,
                     price,
-                    img,
+                    thumbnail,
+                    status,
                     code,
                     stock,
+                    category,
                 };
 
                 if (!Object.values(newProduct).includes(undefined)) {
