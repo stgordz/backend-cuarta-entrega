@@ -1,6 +1,6 @@
 // const { ProductManager } = require('./productos.js')
 // uso el import -> en el package.json agrego esta linea -> "type": "module",
-import ProductManager from "./productos.js";
+/*import ProductManager from "./productos.js";
 
 const productos = new ProductManager('./data/productos.json');
 
@@ -27,7 +27,7 @@ console.log({ p1, p2, p3, p4, p5, p6, p7, p8, p9, p10 });
     stock: 500,
     img: 'imgage5',
     title: 'Modified'
-}*/
+}
 
 //console.log(productos.updtaeProduct(4, updateP1));
-console.log(productos.getProduct());
+/*console.log(productos.getProduct());*/

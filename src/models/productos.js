@@ -6,10 +6,10 @@ export default class ProductManager {
     #products;
     #path
 
-    constructor(path) {
-        this.#path = path;
+    constructor() {
+        this.#path = './src/data/productos.json';
         this.#products = this.#leerArchivo();
-        ProductManager.#id = this.#products.length > 0 ? this.#products[this.#products.length-1].id : 0; 
+        ProductManager.#id = this.#products.length > 0 ? this.#products[this.#products.length - 1].id : 0;
     }
 
     #leerArchivo() {
@@ -67,11 +67,11 @@ export default class ProductManager {
         return this.#products;
     }
 //obtener producto por id
-    getProductById(id) {
-        const productoId = this.#products.find(p => p.id === id);
+getProductById(id) {
+    const productoId = this.#products.find(p => p.id === id);
 
-        return productoId ? productoId : `El producto con ID ${id} no existe.`;
-    }
+    return productoId ? productoId : false;
+}
 //actualizar producto por id
     updtaeProduct(id, propiedades) {
 
